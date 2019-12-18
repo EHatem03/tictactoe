@@ -5,10 +5,18 @@
 let currentPlayer = "O";
 let turns = 0;
 let gameEnd = false
-function performLogic(buttonId,tileId){
 
+function performLogic(buttonId,tileId){
+console.log (turns = turns + 1)    
+$(buttonId).hide();
+$(tileId).text(currentPlayer);
+if (currentPlayer=== "O") {
+    currentPlayer = "X";  
+} else {
+    currentPlayer = "O";
 }
 
+}
 
 
 $("#button1").click(function () {
