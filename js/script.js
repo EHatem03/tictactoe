@@ -4,17 +4,26 @@
 
 let currentPlayer = "O";
 let turns = 0;
-let gameEnd = false
+let gameEnd = true
 
 function performLogic(buttonId,tileId){
+    
 console.log (turns = turns + 1)    
 $(buttonId).hide();
 $(tileId).text(currentPlayer);
+let tile1= $("#tile1").text();
+let tile2= $("#tile2").text();
+let tile3= $("#tile3").text();
+if(tile1 == tile2 && tile2 == tile3){
+ $("#winner").html("<h1>Congrats Player "+currentPlayer+"</h1>")
+
+};
 if (currentPlayer=== "O") {
     currentPlayer = "X";  
 } else {
     currentPlayer = "O";
 }
+
 
 }
 
@@ -55,4 +64,5 @@ $("#button8").click(function () {
 $("#button9").click(function () {
     performLogic("#button9", "#tile9");
 });
+
 
